@@ -61,7 +61,7 @@ Day 1 codes:
             git commit --amend --no-edit
             git log -1
 
-Note that: you could have use command `git commit --amend -m "" above to add content plus change the commit message at same time.
+Note that: you could have use command "git commit --amend -m " above to add content plus change the commit message at same time.
             
             git log
             git tag -a "V1.0" -m "Version 1 of Project was completed"
@@ -69,3 +69,62 @@ Note that: you could have use command `git commit --amend -m "" above to add con
             git tag
             git show V1.0
 
+
+
+
+Day_2 codes:
+        
+        Inside "Git_Workshop" make "Day_2" folder
+        Inside "Day_2" folder make "calc"
+
+    In the terminal:
+            git init
+            git config --list
+            git config --global user.name "Ayush-Bhandari"
+            git config --global user.email "er.st.ayushbhandari@gmail.com/"
+            git config --list
+
+        make a file named "calculator.c"
+            git status
+            git add calculator.c
+            git status -s
+            git commit -m "creates file hierarchy"
+
+        Open the file "calculator.c" and code was writtedn in that file.
+            git commit -a -m "completes basic functions of calculator.c"
+            git status
+            git log --oneline
+
+                    Branching
+            git branch "experimental"
+            git branch
+            git checkout "experimental"
+            git branch
+
+        Change the content of the function product
+            git commit -a -m "Completes product function"
+            git log
+            git log --graph --oneline
+            git checkout master
+            git log
+            git log --graph --oneline
+            git checkout -b bigIsue
+            git branch
+        
+        Changes was made in "calculator.c" by replacing 'num1-num1' with 'num1-num2' in line 8
+            git commit -a -m "fixes the issue with difference"
+            git checkout master
+            git merge bigIsue
+            git log --oneline --graph
+            git branch
+            git branch -d bigIsue
+            git branch
+            git checkout "experimental"
+        
+        add function for division in line 15
+        Update the comment on line no.8 to // this function will not contain bug
+            git commit -a -m "completes divide function"
+            git checkout master
+            git merge experimental
+            git commit -am "does merges"
+            git log --oneline --graph
