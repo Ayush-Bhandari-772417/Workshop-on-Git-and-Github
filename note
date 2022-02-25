@@ -1,0 +1,71 @@
+Day 1 codes:
+
+    In the first terminal - in terminal of "Git_Workshop"
+            git clone https://github.com/Ayush-Bhandari-772417/Workshop-on-Git-and-Github.git .
+            echo "Hello Terminal"
+            git init
+            git config --global user.name "Ayush Bhandari"
+            git config --global user.email "er.st.ayushbhandari@gmail.com"
+            git config --list
+
+        
+        Inside "Git_Workshop" make "Day_1" folder
+        Inside "Day_1" folder make "wonder_of_computers"
+        In "Wonder of Computers" make "author.md" and "story.md" files
+        Open a new (second) terminal
+
+
+    In the second terminal
+            git init
+            git status
+            git add story.md
+            git status
+            git add author.md
+            git status
+            git commit -m "creates folder structures"
+            git status
+            git log
+            git log --patch
+            git log --patch -2
+
+        after adding contents in both the files
+            git status
+            git add author.md
+            git status -s
+            git commit -m "completes basic introduction of author"
+            git log --patch -1
+            git status
+
+        again add contents on both the files
+            git status -s
+            git add .
+            git status
+
+        make a file named "rough_plans"
+            git add .
+            git status
+            git restore --staged rough_plans
+            git status
+
+        create a file named ".gitignore"
+        contents were added in ".gitignore" file
+            git add .
+            git status
+            git commit -m "completes strry and author information"
+            git log
+            git commit --amend -m "completed story and author info"
+            git log
+
+        add content in story.md
+            git add author.md
+            git commit --amend --no-edit
+            git log -1
+
+Note that: you could have use command `git commit --amend -m "" above to add content plus change the commit message at same time.
+            
+            git log
+            git tag -a "V1.0" -m "Version 1 of Project was completed"
+            git log
+            git tag
+            git show V1.0
+
