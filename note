@@ -128,3 +128,43 @@ Day_2 codes:
             git merge experimental
             git commit -am "does merges"
             git log --oneline --graph
+
+
+
+
+
+
+
+Day 3 codes
+        make a new repository name 'calculator'
+        add description
+        choose public
+        copy https link coming in dropdown menu of codes
+        open a folder named 'calculator'
+            git clone https://github.com/Ayush-Bhandari-772417/calculator.git .
+
+        create a file named "calc.c"
+            git add .
+            git commit -m "creates file calc.c"
+            git push origin
+            git log --oneline --decorate
+
+        write content in the file "calc.c"
+            git commit -a -m "second commit"
+            git log --oneline --decorate
+            git push origin
+            git checkout -b experiment
+
+        content added in the file "calc.c"
+            git commit -a -m "third commit from another branch"
+            git push origin experiment
+
+        click on Compare & Pull Request button on the repository
+        click on create pull request button
+        Click on merge pull request button and click confirm merge
+            git branch
+            git checkout main
+            git log --oneline --decorate
+            git pull origin
+            git log --oneline --decorate
+            git log --oneline --graph --decorate
